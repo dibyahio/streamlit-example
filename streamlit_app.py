@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+import numpy as np    
 
 """
 # Welcome to Streamlit!
@@ -14,7 +15,9 @@ forums](https://discuss.streamlit.io).
 Dibya
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-
+X = np.random.randint(100, size=(20))
+Y = np.random.randint(1000, size=(20))
+st.bar_chart(data=np.transpose((X, Y)), *, x=None, y=None, width=0, height=0, use_container_width=True)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
